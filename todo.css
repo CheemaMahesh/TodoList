@@ -1,0 +1,311 @@
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+/*  -------------------------------------Container------------------------------------*/
+  #container {
+    height:700px;
+    width: 800px;
+    margin: 0 auto;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: 1rem;
+    /* box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green inset; */
+  }
+  .c-container{
+    margin-top:50px;
+    height:600px;
+    width:600px;
+    background-color: whitesmoke;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: 1rem;
+    
+    /* box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green inset; */
+  }
+  .divc{
+    margin-top: 10px;
+    height:80px;
+    width:550px;
+    display: flex;
+    flex-direction: row;
+    background-color: #2C3E50;
+    /* border: 2px solid goldenrod; */
+    border-radius:1rem ;
+
+
+  }
+
+/* ------------------------------------search/input------------------------------------------------------------- */
+  input{
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #2C3E50;
+    border:0px;
+  }
+  input::placeholder {
+    position: absolute;
+    /* height: 50px; */
+    /* font-family: cursive; */
+    font-weight: bold;
+    font-size: 2rem;
+    color:#6c6c6a;
+    margin-top:20px;
+  }
+  #inp-span{
+    border:0px;
+    height:80px;
+    width:80px;
+    background-color: #2C3E50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:1rem ;
+  }
+/* ------------------------------------------------------------add-button-------------------------------------------------------- */
+  #inp-span img{
+    height:45px;
+    width:60px;
+    background-color: inherit;
+  }
+  #add{
+    outline: none;
+    height:80px;
+    width:380px;
+    background-color: #2C3E50;
+  }
+  .add-circledP{
+    /* border:0px; */
+    height:80px;
+    width:90px;
+    /* background-color: red; */
+    border:0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    /* visibility: hidden; */
+  }
+  .add-circledP img{
+height:45px;
+width:60px;
+visibility: hidden;
+  }
+  
+
+
+/*-----------------------------------------------------------display-todo---------------------------------------------------------*/
+  .informs{
+    /* background-color: whitesmoke; */
+    height:50px;
+    width:580px;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid grey;
+   
+  }
+  .inf1{
+    height:50px;
+    width:95px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .inf1 img{
+    height:40px;
+    width:40px;
+  }
+  .inf2{
+    height:50px;
+    width:290px;
+    color:grey;
+    /* font-size: 1.2rem; */
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  .inf3{
+    height:50px;
+    width:195px;
+    color:grey;
+    /* font-size: 1.2rem; */
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height:400px;
+    width:520px;
+    /* border: 1px solid #e5e5e5; */
+    overflow: scroll;
+  }
+  #list::-webkit-scrollbar {
+    display: none;
+}
+  ul li {
+    padding: 10px;
+    /* padding-left: 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: inherit;
+    align-items: center;
+  }
+  ul li:hover {
+    background: #f3f3f3;
+  }
+  #list input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+
+  }
+  
+  #list label {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  #list label:before {
+    content:'';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid #0079bf;
+/*    border: 5px solid black;*/
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 10px;
+        border-radius: 50%;
+        color:black;
+
+  }
+  #list input:checked + label:after {
+/*  	    border: 0px;*/
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+/*            background-color: black;*/
+
+  }
+  #list input:checked + label:before {
+    background: #0079bf;
+  } 
+  #list input:checked + label {
+    text-decoration: line-through;
+  }
+  .delete {
+    height: 28px;
+      padding: 5px 0px;
+      border-radius: 3px;
+  }
+  .delete:hover {
+    background: #f2f2f2;
+    cursor: pointer;
+  }
+  h1 {
+    text-align: center;
+  }
+  
+
+
+
+/*---------------------------------------------------------todo-counting--------------------------------------------*/
+  .task-count{
+    border-top: 1px solid black;
+    height:50px;
+    width:600px;
+    display: flex;
+    flex-direction: row;
+    color:grey;
+    font-weight: bold;
+    /* background-color: aqua; */
+  }
+  #task-counter{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    height:50px;
+    width:100px;
+    /* background-color: greenyellow; */
+    
+  }
+  #total-tasks{
+    height:50px;
+    width:100px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #0079bf; */
+  }
+  .all{
+    height:50px;
+    width:180px;
+    display: flex;
+    flex-direction: row-reverse;
+    /* justify-content: center; */
+    align-items: center;
+    /* background-color: yellow; */
+    color:black;
+  }
+  .uncompleted{
+    height:50px;
+    width:120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+  }
+  .completed{
+    height:50px;
+    width:100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: green; */
+  }
+  
+
+  
+  
